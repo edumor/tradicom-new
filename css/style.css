@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Merriweather:wght@300;400;700;900&display=swap');
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Estilos generales */  
@@ -356,7 +356,7 @@ h1 {
 }
 
 
-/* Atributos de la pagina nosotros */
+/* Atributos de la pagina nosotros  */
 
 .container_nosotros {
     margin-top: 10%;
@@ -380,9 +380,10 @@ h1 {
     z-index: 2;
 }
 
-.jf_cont_sec_1_link {
+.jf_cont_sec_1_link_nosotros {
     text-decoration: none;
-    border-bottom: 3px solid rgb(2, 2, 83); /* Añade una línea debajo del texto */
+    border-bottom: 3px solid rgb(2, 2, 83); 
+    width: 40%;
 }
 
 .text-content h1 {
@@ -441,167 +442,90 @@ h1 {
         order: 1;
     }
 }
-
-
-
-
-/* Atributos de la pagina presentacion */
-
-.section_presentacion {
-    display: flex;
-    justify-content: center; /* Centrar la sección */
-    align-items: center;
-    height: 100vh;
-    padding: 0 10%; /* Añadir padding para evitar que se superponga con otras secciones */
-    margin: 0; /* Elimina el margen superior */
-}
-
-.margen_presentacion {
-    margin-top: 10%;
-}
-
-.custom-img {
-    margin-top: 20px; 
-    width: 100%; 
-    height: 100%; /* Ajustar la altura automáticamente */
-    border-radius: 20px; 
-}
-
-.margin_izquierdo {
-    margin-left: 20px;
-}
-
-@media (max-width: 576px) {
-    #presentacion .row {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    #presentacion .col-md-6 {
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    #presentacion .img-fluid {
-        max-width: 100%;
-        height: auto;
-    }
-
-    #presentacion .margen_presentacion {
-        margin-top: 10px;
-    }
-
-    /* Aumentar el tamaño de la fuente para pantallas pequeñas */
-    #presentacion {
-        font-size: 1.2em; /* Ajusta este valor según sea necesario */
-    }
-
-    /* Asegurar que el contenedor no tenga desbordes */
-    .section_presentacion {
-        padding: 0 5%; /* Reducir el padding en pantallas pequeñas */
-    }
-}
-
-
-
+    
 
 /* Atributos para la pagina clientes */
 
 .section_clientes {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.titulo-clientes {
+    color: rgb(19, 57, 116);
+    margin-bottom: 10px;
+}
+
+.jf_cont_sec_1_link_clientes {
+    text-decoration: none;
+    border-bottom: 3px solid rgb(2, 2, 83);
+    width: 45%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.row {
     display: flex;
-    justify-content: center; /* Centrar la sección */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-6.col-sm-4.col-md-2.mb-4 {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 0 10%; /* Añadir padding para evitar que se superponga con otras secciones */
-    margin: 0; /* Elimina el margen superior */
+    height: 100px; /* Ajusta la altura según sea necesario */
 }
 
-.margin_izquierdo {
-    margin-left: 20px;
+.col-6.col-sm-4.col-md-2.mb-4 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
-.galeria {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
+.col-6 {
+    flex: 0 0 20%; 
+    max-width: 20%; 
 }
 
-@media (max-width: 600px) {
-    .section_clientes {
-        padding: 0 10%; 
-        font-size: 14px; 
-        margin-top: 12px; 
-    }
-
-    .galeria {
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center; 
-        text-align: center; 
-        font-size: 12px; 
-        margin-top: 12px; 
-    }
- 
-    .galeria img {
-        width: 150%; 
-        height: auto; 
-    }
-
-    .justificado2 {
-        font-size: 14px; 
-        margin-top: 12px; 
-        text-align: justify;
+@media (max-width: 1200px) {
+    .col-6 {
+        flex: 0 0 25%;
+        max-width: 25%;
     }
 }
 
-/* Atributos para el carrousel de productos */
-
-
-.carousel-image {
-    width: 100%;
-    height: 370px; /* Ajusta la altura según tus necesidades */
-    object-fit: cover;
-    border-radius: 10px; /* Redondea los bordes suavemente */
-    margin-top: 25px; /* Ajusta el margen superior según tus necesidades */
+@media (max-width: 992px) {
+    .col-6 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
 }
 
-.carousel-control-prev, .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 5%; /* Ajusta el ancho según tus necesidades */
+@media (max-width: 768px) {
+    .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
 
-.carousel-control-prev {
-    left: 0;
-}
-
-.carousel-control-next {
-    right: 0;
-}
-
-/* Estilos para pantallas pequeñas */
 @media (max-width: 576px) {
-    .carousel-image {
-        width: 100%;
-        height: 200px; /* Ajusta la altura automáticamente */
-        margin-top: 10px; /* Reduce el margen superior */
-    }
-
-    .carousel-control-prev, .carousel-control-next {
-        width: 10%; /* Aumenta el ancho de los controles */
-    }
-
-    body {
-        font-size: 10px; /* Ajusta el tamaño de la fuente según tus necesidades */
-    }
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 1.5em; /* Ajusta el tamaño del título */
-        text-align: center; /* Centra el título */
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
 
 
 
@@ -676,22 +600,28 @@ h1 {
     justify-content: center; /* Centraliza más el texto */
 }
 
+
+.texto-representacion {
+    margin-top: 20px; /* Reduce el margen superior */
+    margin-bottom: 10px; /* Añade un margen inferior para ajustar el espacio */
+    font-size: 2rem; 
+    font-weight: bold;
+    width: calc(100% - 4rem); 
+    padding: 0 1rem;
+    margin-left: 2rem; 
+    margin-right: 2rem; 
+    color: rgb(19, 57, 116) !important;
+    text-align: center; 
+}
+
 .bottom-half {
-    background-color: white; /* Fondo blanco para la fila de logos */
+    height: auto; /* Ajusta este valor según sea necesario */
+    padding-top: 1px; /* Reduce el padding superior */
+    background-color: white; 
     flex-direction: column;
 }
 
-.texto-representacion {
-    margin-top: 250px; /* Ajusta el valor según sea necesario */
-    font-size: 2rem; 
-    font-weight: bold;
-    width: calc(100% - 4rem); /* Ajusta el ancho para compensar los márgenes */
-    padding: 0 1rem;
-    margin-left: 2rem; /* Mayor margen izquierdo */
-    margin-right: 2rem; /* Mayor margen derecho */
-    color: rgb(19, 57, 116) !important;
-    text-align: center; /* Centraliza el texto */
-}
+
 
 .grid-container {
     display: grid;
@@ -739,188 +669,179 @@ h1 {
 @media (max-width: 768px) {
     .texto-representacion {
         font-size: 1.2rem; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
-        margin-top: 250px; /* Ajusta el margen superior para pantallas más pequeñas */
+        margin-top: 20px; /* Ajusta el margen superior para pantallas más pequeñas */
+        margin-bottom: 0; /* Elimina el margen inferior */
+    }
+
+    .bottom-half {
+        padding-top: 0; /* Elimina el padding superior */
     }
 
     .logo-item img {
-        width: 80px; /* Ajusta el tamaño de los logos para pantallas más pequeñas */
-        height: 80px; /* Ajusta el tamaño de los logos para pantallas más pequeñas */
+        width: 60px; /* Ajusta el tamaño de los logos para pantallas más pequeñas */
+        height: 60px; /* Ajusta el tamaño de los logos para pantallas más pequeñas */
+    }
+
+    .header {
+        padding-bottom: 5px; /* Añade espacio debajo del header */
     }
 }
 
 
 
-/* Estilos para la pagina de PSA y TSA*/
+/* Atributos para el carrousel de productos */
 
-.section_psa {
-    position: relative;
-    overflow: hidden;
-    margin-top: 100px;
-    height: 100vh;
-}
-
-.title {
-    font-size: 2; /* Ajustado de 2.5em a 2em */
-    text-align: center;
-    font-weight: bold;
-}
-
-.texto-adsorcion {
-    font-size: 1.5em;
-    color: rgb(2, 2, 83) !important;
-    
-}
-
-
-#video-container {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.overlay-text-psa {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    padding: 20px;
+.centered-container {
+    margin: 20px auto; /* Ajusta los valores según tus necesidades */
+    max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+    padding: 20px; /* Ajusta el relleno según tus necesidades */
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: rgb(2, 2, 83);
-    font-size: 1em;
+    min-height: 100vh; /* Cambia height a min-height para asegurar que ocupe al menos el 100% de la pantalla */
+    box-sizing: border-box;
+    color: rgb(19, 57, 116);
+    overflow: hidden; /* Evita el desbordamiento */
+}
+
+.section_presentacion {
+    margin: 20px; /* Márgenes iguales en todos los lados */
+}
+
+.small-title {
+    font-size: 1.2em; /* Ajusta el tamaño según sea necesario */
     font-weight: bold;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
+    color: rgb(19, 57, 116);
 }
 
-.bordered-section-psa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-    margin-right: auto;
+.center-text {
+    margin-left: 120px;
 }
 
-.video-container-psa {
-    position: relative;
-    top: 0;
-    left: 0;
+.reduced {
+    margin-bottom: 1.8em; /* Ajusta este valor según sea necesario */
+}
+
+.reduced-spacing {
+    margin-bottom: 0.01px; /* Ajusta este valor según sea necesario */
+}
+
+.titulo-motores {
+    color: rgb(19, 57, 116);
+    margin-bottom: 10px;
+}
+
+.jf_cont_sec_1_link_presentacion {
+    text-decoration: none;
+    border-bottom: 3px solid rgb(2, 2, 83);
+    width: 65%;
+}
+
+#carouselExampleIndicators {
+    margin-top: 30px; /* Ajusta este valor según sea necesario */
+}
+
+.carousel {
+    max-width: 100%; /* Ajusta el tamaño del carrusel */
+}
+
+.carousel-image {
     width: 100%;
-    height: 100%;
+    height: 370px; /* Ajusta la altura según tus necesidades */
     object-fit: cover;
-    z-index: -1;
-    border: none;
-    outline: none;
-    opacity: 0.8;
+    border-radius: 15px; /* Redondea los bordes suavemente */
+    margin-top: 45px; /* Ajusta el margen superior según tus necesidades */
 }
 
-.video-container-psa::before {
-    content: "";
+.carousel-control-prev, .carousel-control-next {
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%; /* Ajusta el ancho según tus necesidades */
+}
+
+.carousel-control-prev {
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
 }
 
-.parrafo-psa {
-    padding: 20px;
-    font-size: 1.25em;
-    font-weight: bold;
-    text-align: left;
+.carousel-control-next {
+    right: 0;
 }
 
-.parrafo-psa::before {
-    font-size: 0.875em;
-}
+/* Estilos para pantallas pequeñas */
 
-.subparrafo-psa {
-    list-style-type: none;
-    padding-left: 0;
-    text-align: left;
-}
-
-.subparrafo-psa li::before {
-    content: "• ";
-    font-weight: bold;
-}
-
-#PSA .overlay-text {
-    position: relative;
-    z-index: 2;
-    margin: 0;
-    padding: 50px;
-}
-
-#PSA .overlay-text h1,
-#PSA .overlay-text h2,
-#PSA .overlay-text p,
-#PSA .overlay-text ul,
-#PSA .overlay-text li {
-    margin: 5px 0;
-    padding: 0;
-}
-
-/* Media Queries para pantallas pequeñas */
-@media (max-width: 768px) {
-    .overlay-text-psa {
-        padding: 10px;
-        font-size: 1.2em; /* Ajusta el tamaño de la fuente */
-    }
-
-    .video-container {
+@media (max-width: 576px) {
+    .carousel-image {
         width: 100%;
-        height: auto;
+        height: 200px; /* Ajusta la altura fija para pantallas pequeñas */
+        object-fit: cover; /* Mantiene la proporción de la imagen */
+        margin-top: 5px; /* Reduce el margen superior */
     }
 
-    .overlay-text-psa {
-        overflow: hidden;
-        white-space: normal;
+    .carousel-control-prev, .carousel-control-next {
+        width: 10%; /* Aumenta el ancho de los controles */
     }
 
-    .video-container-psa {
-        height: auto; /* Ajusta la altura para pantallas pequeñas */
-        min-height: 100vh; /* Asegura que el contenedor tenga al menos la altura de la ventana */
+    body {
+        font-size: 16px; /* Ajusta el tamaño de la fuente según tus necesidades */
+        overflow-x: hidden; /* Evita el desbordamiento horizontal */
+        overflow-y: auto; /* Permite el desplazamiento vertical */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.2em; /* Ajusta el tamaño del título */
+        text-align: center; /* Centra el título */
+    }
+
+    .section_presentacion {
+        padding: 0 10px; /* Ajusta el padding para evitar desbordamiento */
+        margin: 10px 0; /* Ajusta el margen para evitar superposición */
+    }
+
+    .container-fluid {
+        padding: 0; /* Elimina el padding del contenedor */
+    }
+
+    .centered-container {
+        margin: 5px auto; /* Ajusta los valores según tus necesidades */
+        padding: 5px; /* Ajusta el relleno según tus necesidades */
+        min-height: 100vh; /* Asegura que ocupe al menos el 100% de la pantalla */
+    }
+
+    .center-text {
+        margin-left: 0; /* Elimina el margen izquierdo */
+        text-align: center; /* Centra el texto */
+    }
+
+    .titulo-motores {
+        font-size: 1.5em; /* Ajusta el tamaño del título */
+    }
+
+    .small-title {
+        font-size: 1em; /* Ajusta el tamaño según sea necesario */
+    }
+
+    .reduced {
+        margin-bottom: 2px; /* Ajusta este valor según sea necesario */
+    }
+
+    .reduced-spacing {
+        margin-bottom: 2px; /* Ajusta este valor según sea necesario */
+    }
+
+    .service-container {
+        padding: 10px; /* Ajusta el padding para evitar desbordamiento */
+    }
+
+    .carousel {
+        margin-top: 30px; /* Ajusta el margen superior */
     }
 }
-
-@media (max-width: 480px) {
-    .overlay-text-psa {
-        padding: 5px;
-        font-size: 1.1em; /* Ajusta el tamaño de la fuente */
-    }
-
-    .video-container {
-        width: 100%;
-        height: auto;
-    }
-
-    .video-container-psa {
-        height: 100vh; /* Asegura que el video ocupe toda la altura del contenedor */
-        margin: 0; /* Elimina márgenes superiores e inferiores */
-    }
-
-    .section_psa {
-        margin-left: 10px; /* Ajusta el margen izquierdo */
-        margin-right: 10px; /* Ajusta el margen derecho */
-    }
-}
-
 
 
 /* Atributos de la seccion contacto */
+
 .map-responsive {
     overflow: hidden;
     padding-bottom: 56.25%;
